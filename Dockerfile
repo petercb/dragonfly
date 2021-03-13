@@ -12,6 +12,6 @@ ARG ARCH=
 FROM ${ARCH}alpine:3.13 AS run
 
 WORKDIR /dragonfly
-COPY --from=build /go/bin/dragonfly /dragonfly/dragonfly
+COPY --from=build /go/bin/dragonfly /bin/dragonfly
 
-CMD ["dragonfly"]
+CMD ["/bin/dragonfly"]
